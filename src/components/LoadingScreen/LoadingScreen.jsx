@@ -4,7 +4,6 @@ import "./LoadingScreen.css";
 
 function LoadingScreen({ onFinish }) {
   const [progress, setProgress] = useState(0);
-
   const onFinishRef = useRef(onFinish);
 
   useEffect(() => {
@@ -16,8 +15,7 @@ function LoadingScreen({ onFinish }) {
     let finishTimeout;
 
     const timer = setInterval(() => {
-      count++;
-
+      count += 1;
       setProgress(count);
 
       if (count >= 100) {
@@ -25,9 +23,9 @@ function LoadingScreen({ onFinish }) {
 
         finishTimeout = setTimeout(() => {
           onFinishRef.current?.();
-        }, 700);
+        }, 200);
       }
-    }, 35);
+    }, 15);
 
     return () => {
       clearInterval(timer);
