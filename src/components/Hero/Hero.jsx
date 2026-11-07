@@ -241,10 +241,6 @@ export default function Hero() {
             <b aria-hidden="true">↗</b>
           </a>
 
-          <a href="#contact" className="secondaryButton">
-            CONTACT AEGIS
-          </a>
-
           <a
             href="https://github.com/DevABHI2005"
             className="githubButton"
@@ -253,6 +249,12 @@ export default function Hero() {
           >
             GITHUB <span aria-hidden="true">↗</span>
           </a>
+
+          <a href="#contact" className="secondaryButton">
+            CONTACT AEGIS
+          </a>
+
+          
         </motion.div>
       </div>
 
