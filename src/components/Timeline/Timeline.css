@@ -1,0 +1,1059 @@
+.educationSection {
+  width: 90%;
+  max-width: 1400px;
+
+  margin: auto;
+
+  padding: 60px 0 80px;
+
+  position: relative;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.educationTitle {
+
+  text-align: center;
+
+  margin-bottom: 70px;
+
+}
+
+
+.educationTitle p {
+
+  margin: 0 0 14px;
+
+  color: #63E6FF;
+
+  font-size: 11px;
+
+  letter-spacing: 5px;
+
+}
+
+
+.educationTitle h1 {
+
+  margin: 0;
+
+  color: white;
+
+  font-size: clamp(42px, 5vw, 60px);
+
+  font-weight: 800;
+
+  letter-spacing: -2px;
+
+}
+
+
+.educationTitle h1 span {
+
+  color: #ff5037;
+
+  text-shadow:
+    0 0 25px rgba(255,80,55,.2);
+
+}
+
+
+.educationSubtitle {
+
+  margin-top: 13px;
+
+  color: #526A7A;
+
+  font-size: 9px;
+
+  letter-spacing: 3px;
+
+}
+
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline {
+
+  position: relative;
+
+  margin-top: 40px;
+
+}
+
+
+/* CENTRAL LINE */
+
+.timeline::before {
+
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+
+  top: 0;
+
+  bottom: 0;
+
+  width: 1px;
+
+  transform: translateX(-50%);
+
+  background:
+
+    linear-gradient(
+      to bottom,
+      transparent,
+      rgba(99,230,255,.65) 8%,
+      rgba(99,230,255,.65) 92%,
+      transparent
+    );
+
+  box-shadow:
+
+    0 0 12px rgba(99,230,255,.35);
+
+}
+
+
+/* MOVING SCANNER */
+
+.timelineScanner {
+
+  position: absolute;
+
+  left: calc(50% - 2px);
+
+  top: 5%;
+
+  width: 5px;
+
+  height: 80px;
+
+  background: #63E6FF;
+
+  border-radius: 20px;
+
+  filter: blur(3px);
+
+  box-shadow:
+
+    0 0 15px #63E6FF,
+
+    0 0 30px rgba(99,230,255,.4);
+
+  animation:
+    timelineScan 4s linear infinite;
+
+  z-index: 2;
+
+}
+
+
+@keyframes timelineScan {
+
+  0% {
+
+    transform: translateY(-100px);
+
+    opacity: 0;
+
+  }
+
+  15% {
+
+    opacity: 1;
+
+  }
+
+  85% {
+
+    opacity: 1;
+
+  }
+
+  100% {
+
+    transform: translateY(650px);
+
+    opacity: 0;
+
+  }
+
+}
+
+
+/* =========================
+   ITEMS
+========================= */
+
+.timelineItem {
+  width: 50%;
+  position: relative;
+  padding: 25px 40px;
+
+  height: fit-content !important;
+  min-height: 0 !important;
+
+  align-self: flex-start;
+}
+
+.timelineItem.left {
+  left: 0;
+}
+
+.timelineItem.right {
+  left: 50%;
+}
+
+
+/* =========================
+   NODE
+========================= */
+
+.timelineNode {
+
+  position: absolute;
+
+  top: 55px;
+
+  width: 27px;
+
+  height: 27px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #040A11;
+
+  border: 1px solid #63E6FF;
+
+  box-shadow:
+
+    0 0 15px rgba(99,230,255,.35),
+
+    0 0 30px rgba(99,230,255,.1);
+
+  z-index: 10;
+
+}
+
+
+.timelineItem.left .timelineNode {
+
+  right: -14px;
+
+}
+
+
+.timelineItem.right .timelineNode {
+
+  left: -14px;
+
+}
+
+
+.nodeCore {
+
+  width: 7px;
+
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #63E6FF;
+
+  box-shadow:
+
+    0 0 8px #63E6FF,
+
+    0 0 18px #63E6FF;
+
+  animation: nodePulse 2s infinite;
+
+}
+
+
+@keyframes nodePulse {
+
+  0%,
+  100% {
+
+    transform: scale(1);
+
+    opacity: 1;
+
+  }
+
+  50% {
+
+    transform: scale(.55);
+
+    opacity: .45;
+
+  }
+
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.timelineCard {
+  position: relative;
+
+  width: 100%;
+  max-width: 560px;
+
+  height: fit-content !important;
+  min-height: 0 !important;
+
+  padding: 25px;
+
+  margin: 0;
+
+  box-sizing: border-box;
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.05),
+      rgba(255,255,255,.015)
+    );
+
+  border: 1px solid rgba(99,230,255,.13);
+
+  backdrop-filter: blur(20px);
+
+  box-shadow:
+    inset 0 1px rgba(255,255,255,.05),
+    0 20px 60px rgba(0,0,0,.2);
+
+  overflow: hidden;
+
+  transition: .4s;
+}
+
+
+.timelineCard::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  width: 35%;
+
+  height: 2px;
+
+  background:
+
+    linear-gradient(
+      90deg,
+      #ff5037,
+      transparent
+    );
+
+  box-shadow:
+
+    0 0 15px rgba(255,80,55,.45);
+
+}
+
+
+.timelineCard:hover {
+
+  transform: translateY(-8px);
+
+  border-color:
+
+    rgba(99,230,255,.3);
+
+  box-shadow:
+
+    inset 0 1px rgba(255,255,255,.05),
+
+    0 30px 70px rgba(0,0,0,.3),
+
+    0 0 30px rgba(99,230,255,.05);
+
+}
+
+
+/* =========================
+   CARD TOP
+========================= */
+
+.cardTop {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 17px;
+
+}
+
+
+.degreeIcon {
+
+  width: 58px;
+
+  height: 58px;
+
+  min-width: 58px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 14px;
+
+  background:
+
+    rgba(99,230,255,.06);
+
+  border:
+
+    1px solid rgba(99,230,255,.15);
+
+  color: #63E6FF;
+
+  font-size: 24px;
+
+}
+
+
+.recordCode {
+
+  color: #607989;
+
+  font-size: 8px;
+
+  letter-spacing: 2px;
+
+}
+
+
+.cardTop h2 {
+
+  margin: 8px 0 5px;
+
+  color: white;
+
+  font-size: 25px;
+
+  line-height: 1.25;
+
+}
+
+
+.cardTop h3 {
+
+  margin: 0;
+
+  color: #ff5037;
+
+  font-size: 15px;
+
+  font-weight: 500;
+
+}
+
+
+/* =========================
+   LOCATION
+========================= */
+
+.locationInfo {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin-top: 18px;
+
+  color: #718695;
+
+  font-size: 10px;
+
+}
+
+
+.locationInfo svg {
+
+  color: #63E6FF;
+
+  font-size: 12px;
+
+}
+
+
+/* =========================
+   DIVIDER
+========================= */
+
+.educationDivider {
+
+  height: 1px;
+
+  margin: 25px 0;
+
+  background:
+
+    linear-gradient(
+      90deg,
+      rgba(99,230,255,.18),
+      rgba(255,255,255,.04),
+      transparent
+    );
+
+}
+
+
+/* =========================
+   INFO
+========================= */
+
+.timelineInfo {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 10px;
+
+  height: auto !important;
+  min-height: 0 !important;
+
+  align-items: start;
+}
+
+.timelineInfo > div {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  width: 100%;
+
+  height: auto !important;
+  min-height: 75px !important;
+  max-height: 90px !important;
+
+  box-sizing: border-box;
+
+  padding: 12px;
+
+  border-radius: 11px;
+
+  background: rgba(255,255,255,.025);
+
+  border: 1px solid rgba(99,230,255,.07);
+}
+
+
+.timelineInfo svg {
+
+  color: #63E6FF;
+
+  font-size: 15px;
+
+}
+
+
+.timelineInfo section {
+
+  min-width: 0;
+
+}
+
+
+.timelineInfo small {
+
+  display: block;
+
+  color: #526979;
+
+  font-size: 7px;
+
+  letter-spacing: 1.5px;
+
+  margin-bottom: 5px;
+
+}
+
+
+.timelineInfo strong {
+
+  display: block;
+
+  color: #C9D7DF;
+
+  font-size: 9px;
+
+  line-height: 1.3;
+
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.descriptionBlock {
+
+  margin-top: 23px;
+
+}
+
+
+.descriptionBlock > span {
+
+  color: #63E6FF;
+
+  font-size: 8px;
+
+  letter-spacing: 2.5px;
+
+}
+
+
+.description {
+
+  margin: 10px 0 0;
+
+  color: #91A4B2;
+
+  font-size: 13px;
+
+  line-height: 1.8;
+
+}
+
+
+/* =========================
+   STATUS
+========================= */
+
+.status {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 22px;
+
+  padding: 9px 13px;
+
+  border-radius: 20px;
+
+  background:
+
+    rgba(124,255,178,.06);
+
+  border:
+
+    1px solid rgba(124,255,178,.14);
+
+}
+
+
+.status > svg {
+
+  color: #7CFFB2;
+
+  font-size: 13px;
+
+}
+
+
+.status small {
+
+  display: block;
+
+  color: #526979;
+
+  font-size: 6px;
+
+  letter-spacing: 1.5px;
+
+  margin-bottom: 3px;
+
+}
+
+
+.status strong {
+
+  color: #7CFFB2;
+
+  font-size: 8px;
+
+  letter-spacing: 1px;
+
+}
+
+
+/* =========================
+   CARD FOOTER
+========================= */
+
+.cardFooter {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-top: 22px;
+
+  padding-top: 14px;
+
+  border-top:
+
+    1px solid rgba(255,255,255,.05);
+
+  color: #3F5665;
+
+  font-size: 6px;
+
+  letter-spacing: 1.5px;
+
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:950px) {
+
+  .timeline::before {
+
+    left: 20px;
+
+  }
+
+  .timelineScanner {
+
+    left: 18px;
+
+  }
+
+  .timelineItem {
+
+    width: 100%;
+
+    left: 0 !important;
+
+    padding:
+
+      25px 0 25px 60px;
+
+  }
+
+  .timelineNode {
+
+    left: 7px !important;
+
+    right: auto !important;
+
+  }
+
+}
+
+
+@media(max-width:650px) {
+
+  .educationSection {
+
+    width: 92%;
+
+    padding: 60px 0;
+
+  }
+
+  .educationTitle {
+
+    margin-bottom: 45px;
+
+  }
+
+  .educationTitle h1 {
+
+    font-size: 40px;
+
+  }
+
+  .timelineCard {
+
+    padding: 24px;
+
+  }
+
+  .cardTop {
+
+    align-items: flex-start;
+
+  }
+
+  .cardTop h2 {
+
+    font-size: 21px;
+
+  }
+
+  .cardTop h3 {
+
+    font-size: 13px;
+
+  }
+
+  .timelineInfo {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .cardFooter {
+
+    flex-direction: column;
+
+  }
+
+}
+/* =========================
+   TIMELINE HEIGHT FIX
+========================= */
+
+.educationSection,
+.timeline,
+.timelineItem,
+.timelineCard,
+.timelineInfo,
+.timelineInfo > div {
+  box-sizing: border-box;
+}
+
+.timelineItem,
+.timelineCard,
+.timelineInfo,
+.timelineInfo > div {
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+.timelineCard {
+  align-self: flex-start;
+}
+
+.timelineInfo > div {
+  max-height: 90px !important;
+}
+
+
+/* =========================
+   EDUCATION SECTION REFINEMENTS
+========================= */
+
+.educationSection {
+  overflow: hidden;
+}
+
+.timelineItem {
+  box-sizing: border-box;
+}
+
+.timelineCard {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.degreeDetails {
+  min-width: 0;
+}
+
+.cardTop h2,
+.cardTop h3 {
+  overflow-wrap: anywhere;
+}
+
+/* Separate Education status from Experience status */
+.educationStatus {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 22px;
+  padding: 9px 13px;
+  border-radius: 20px;
+  background: rgba(124, 255, 178, 0.06);
+  border: 1px solid rgba(124, 255, 178, 0.14);
+}
+
+.educationStatus > svg {
+  color: #7cffb2;
+  font-size: 13px;
+}
+
+.educationStatus small {
+  display: block;
+  color: #526979;
+  font-size: 6px;
+  letter-spacing: 1.5px;
+  margin-bottom: 3px;
+}
+
+.educationStatus strong {
+  color: #7cffb2;
+  font-size: 8px;
+  letter-spacing: 1px;
+}
+
+/* Keyboard accessibility */
+.timelineCard:focus-within {
+  border-color: rgba(99, 230, 255, 0.35);
+}
+
+/* Tablet */
+@media (max-width: 950px) {
+  .timelineItem {
+    padding-right: 0;
+  }
+
+  .timelineCard {
+    max-width: 100%;
+  }
+
+  .timelineScanner {
+    animation-duration: 6s;
+  }
+}
+
+/* Mobile */
+@media (max-width: 650px) {
+  .educationSection {
+    width: 92%;
+    padding: 45px 0 65px;
+  }
+
+  .educationTitle h1 {
+    font-size: clamp(32px, 8vw, 40px);
+  }
+
+  .educationTitle p {
+    letter-spacing: 3px;
+    font-size: 9px;
+  }
+
+  .educationSubtitle {
+    font-size: 8px;
+    letter-spacing: 2px;
+  }
+
+  .timelineItem {
+    padding: 20px 0 20px 42px;
+  }
+
+  .timeline::before {
+    left: 12px;
+  }
+
+  .timelineScanner {
+    left: 10px;
+  }
+
+  .timelineNode {
+    left: -1px !important;
+    width: 25px;
+    height: 25px;
+  }
+
+  .timelineCard {
+    padding: 20px 16px;
+    border-radius: 16px;
+  }
+
+  .degreeIcon {
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+    font-size: 20px;
+  }
+
+  .cardTop {
+    gap: 12px;
+  }
+
+  .cardTop h2 {
+    font-size: 19px;
+  }
+
+  .cardTop h3 {
+    font-size: 12px;
+  }
+
+  .locationInfo {
+    align-items: flex-start;
+    line-height: 1.6;
+  }
+
+  .timelineInfo {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .timelineInfo > div {
+    min-height: 68px !important;
+    padding: 9px;
+  }
+
+  .timelineInfo strong {
+    overflow-wrap: anywhere;
+  }
+
+  .description {
+    font-size: 12px;
+  }
+
+  .cardFooter {
+    font-size: 6px;
+    letter-spacing: 1px;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .timelineScanner,
+  .nodeCore {
+    animation: none !important;
+  }
+
+  .timelineCard,
+  .timelineCard:hover {
+    transition: none !important;
+    transform: none !important;
+  }
+}

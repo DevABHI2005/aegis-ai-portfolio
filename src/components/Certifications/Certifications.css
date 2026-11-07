@@ -1,0 +1,1173 @@
+.certifications {
+
+  width: 90%;
+
+  max-width: 1400px;
+
+  margin: auto;
+
+  padding: 70px 0 100px;
+
+  position: relative;
+
+  box-sizing: border-box;
+
+}
+
+
+/* =========================
+   BACKGROUND
+========================= */
+
+.certifications::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 700px;
+
+  height: 700px;
+
+  left: 50%;
+
+  top: 100px;
+
+  transform: translateX(-50%);
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 55, 35, .07),
+      rgba(255, 140, 40, .035) 35%,
+      transparent 70%
+    );
+
+  pointer-events: none;
+
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.certHeader {
+
+  text-align: center;
+
+  margin-bottom: 35px;
+
+  position: relative;
+
+  z-index: 2;
+
+}
+
+
+.systemLabel {
+
+  color: #ff5b45;
+
+  letter-spacing: 5px;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  margin-bottom: 15px;
+
+}
+
+
+.certHeader h1 {
+
+  margin: 0;
+
+  font-size: 58px;
+
+  font-weight: 800;
+
+  color: white;
+
+  letter-spacing: 1px;
+
+  text-shadow:
+    0 0 20px rgba(255, 60, 40, .15);
+
+}
+
+
+.certSubtitle {
+
+  margin-top: 15px;
+
+  color: #91a0b2;
+
+  font-size: 16px;
+
+}
+
+
+/* =========================
+   VAULT STATUS
+========================= */
+
+.vaultStatus {
+
+  max-width: 900px;
+
+  margin: 0 auto 50px;
+
+  padding: 13px 20px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 20px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 55, 35, .07),
+      rgba(255,255,255,.025),
+      rgba(255, 55, 35, .07)
+    );
+
+  border-top: 1px solid rgba(255, 70, 45, .2);
+
+  border-bottom: 1px solid rgba(255, 70, 45, .2);
+
+  color: #8e9daf;
+
+  font-size: 10px;
+
+  letter-spacing: 2px;
+
+}
+
+
+.vaultStatus strong {
+
+  color: #ffb35c;
+
+  font-size: 10px;
+
+}
+
+
+.vaultDot {
+
+  width: 8px;
+
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: #ff513d;
+
+  box-shadow:
+    0 0 10px #ff513d,
+    0 0 20px rgba(255, 81, 61, .7);
+
+  animation: vaultPulse 1.5s infinite;
+
+}
+
+
+@keyframes vaultPulse {
+
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: .45;
+    transform: scale(.7);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+}
+
+
+/* =========================
+   GRID
+========================= */
+
+.certGrid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 28px;
+
+  position: relative;
+
+  z-index: 1;
+
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.certCard {
+
+  position: relative;
+
+  padding: 32px;
+
+  min-height: 430px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(27, 30, 36, .96),
+      rgba(7, 9, 13, .98)
+    );
+
+  border: 1px solid
+    rgba(255, 72, 50, .16);
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  backdrop-filter: blur(20px);
+
+  box-shadow:
+    inset 0 1px 0
+      rgba(255,255,255,.035),
+    0 20px 60px
+      rgba(0,0,0,.25);
+
+  transition:
+    transform .45s ease,
+    border-color .45s ease,
+    box-shadow .45s ease;
+
+}
+
+
+/* Metallic highlight */
+
+.certCard::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 280px;
+
+  height: 280px;
+
+  right: -120px;
+
+  top: -120px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 69, 45, .15),
+      transparent 70%
+    );
+
+  transition: .5s;
+
+}
+
+
+/* Bottom glow */
+
+.certCard::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 15%;
+
+  right: 15%;
+
+  bottom: -100px;
+
+  height: 150px;
+
+  background:
+    radial-gradient(
+      ellipse,
+      rgba(255, 82, 55, .12),
+      transparent 70%
+    );
+
+  pointer-events: none;
+
+}
+
+
+.certCard:hover {
+
+  transform:
+    translateY(-10px)
+    perspective(1000px)
+    rotateX(1deg);
+
+  border-color:
+    rgba(255, 72, 50, .55);
+
+  box-shadow:
+    0 25px 70px rgba(0,0,0,.45),
+    0 0 35px rgba(255,65,45,.1);
+
+}
+
+
+.certCard:hover::before {
+
+  transform: scale(1.5);
+
+}
+
+
+/* =========================
+   HUD CORNERS
+========================= */
+
+.hudCorner {
+
+  position: absolute;
+
+  width: 18px;
+
+  height: 18px;
+
+  pointer-events: none;
+
+  opacity: .8;
+
+}
+
+
+.topLeft {
+
+  top: 12px;
+
+  left: 12px;
+
+  border-top:
+    1px solid #ff563f;
+
+  border-left:
+    1px solid #ff563f;
+
+}
+
+
+.topRight {
+
+  top: 12px;
+
+  right: 12px;
+
+  border-top:
+    1px solid #ff563f;
+
+  border-right:
+    1px solid #ff563f;
+
+}
+
+
+.bottomLeft {
+
+  bottom: 12px;
+
+  left: 12px;
+
+  border-bottom:
+    1px solid #ff563f;
+
+  border-left:
+    1px solid #ff563f;
+
+}
+
+
+.bottomRight {
+
+  bottom: 12px;
+
+  right: 12px;
+
+  border-bottom:
+    1px solid #ff563f;
+
+  border-right:
+    1px solid #ff563f;
+
+}
+
+
+/* =========================
+   SCAN LINE
+========================= */
+
+.scanLine {
+
+  position: absolute;
+
+  left: 0;
+
+  top: -5px;
+
+  width: 100%;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #ff543e,
+      transparent
+    );
+
+  box-shadow:
+    0 0 12px #ff543e;
+
+  opacity: 0;
+
+}
+
+
+.certCard:hover .scanLine {
+
+  opacity: .7;
+
+  animation:
+    cardScan 2.5s linear infinite;
+
+}
+
+
+@keyframes cardScan {
+
+  0% {
+    top: 0;
+  }
+
+  100% {
+    top: 100%;
+  }
+
+}
+
+
+/* =========================
+   TOP
+========================= */
+
+.certTop {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  position: relative;
+
+  z-index: 2;
+
+}
+
+
+.certNumber {
+
+  font-size: 10px;
+
+  letter-spacing: 3px;
+
+  color: #65707e;
+
+}
+
+
+.verified {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color: #8cffb7;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+}
+
+
+.verified svg {
+
+  font-size: 12px;
+
+}
+
+
+/* =========================
+   ARC REACTOR ICON
+========================= */
+
+.certIcon {
+
+  position: relative;
+
+  width: 76px;
+
+  height: 76px;
+
+  margin-top: 28px;
+
+  margin-bottom: 22px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+}
+
+
+.reactorRing {
+
+  position: absolute;
+
+  width: 68px;
+
+  height: 68px;
+
+  border-radius: 50%;
+
+  border:
+    1px solid
+    rgba(255, 91, 65, .55);
+
+  box-shadow:
+    0 0 15px rgba(255, 65, 45, .18);
+
+  animation:
+    reactorRotate 8s linear infinite;
+
+}
+
+
+.reactorRing::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 7px;
+
+  border-radius: 50%;
+
+  border:
+    1px dashed
+    rgba(255, 180, 80, .5);
+
+}
+
+
+.reactorCore {
+
+  position: absolute;
+
+  width: 35px;
+
+  height: 35px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      #fff 0%,
+      #ffd27a 15%,
+      #ff6a42 35%,
+      #a81910 65%,
+      transparent 70%
+    );
+
+  box-shadow:
+    0 0 15px #ff613f,
+    0 0 35px rgba(255, 71, 45, .5);
+
+  animation:
+    reactorPulse 1.8s ease-in-out infinite;
+
+}
+
+
+.certIconSymbol {
+
+  position: relative;
+
+  z-index: 2;
+
+  font-size: 28px;
+
+  color: white;
+
+  filter:
+    drop-shadow(
+      0 0 5px
+      rgba(255,255,255,.7)
+    );
+
+}
+
+
+@keyframes reactorRotate {
+
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+
+@keyframes reactorPulse {
+
+  0%,
+  100% {
+    transform: scale(.9);
+  }
+
+  50% {
+    transform: scale(1.08);
+  }
+
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.certCategory {
+
+  color: #ff684e;
+
+  font-size: 10px;
+
+  letter-spacing: 2px;
+
+  font-weight: 700;
+
+}
+
+
+.certCard h2 {
+
+  font-size: 24px;
+
+  line-height: 1.35;
+
+  margin:
+    11px 0 8px;
+
+  color: white;
+
+}
+
+
+.issuer {
+
+  color: #98a6b7;
+
+  font-size: 14px;
+
+}
+
+
+/* =========================
+   META
+========================= */
+
+.certMeta {
+
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 12px;
+
+  margin-top: 24px;
+
+}
+
+
+.certMeta div {
+
+  padding: 13px;
+
+  border-radius: 10px;
+
+  background:
+    rgba(255,255,255,.025);
+
+  border:
+    1px solid
+    rgba(255,255,255,.055);
+
+}
+
+
+.certMeta span {
+
+  display: block;
+
+  color: #5e6b79;
+
+  font-size: 8px;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 6px;
+
+}
+
+
+.certMeta strong {
+
+  display: block;
+
+  color: #dce4ed;
+
+  font-size: 11px;
+
+  line-height: 1.4;
+
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.certDescription {
+
+  margin-top: 20px;
+
+  color: #9daab8;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+
+}
+
+
+/* =========================
+   ACTIONS
+========================= */
+
+.certActions {
+
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-top: 23px;
+
+}
+
+
+.certButton {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 10px 15px;
+
+  border-radius: 8px;
+
+  text-decoration: none;
+
+  color: #cbd6e2;
+
+  background:
+    rgba(255,255,255,.035);
+
+  border:
+    1px solid
+    rgba(255,255,255,.09);
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: .5px;
+
+  transition: .3s;
+
+}
+
+
+.certButton:hover {
+
+  color: #ff735a;
+
+  border-color:
+    #ff5b45;
+
+  transform:
+    translateY(-3px);
+
+}
+
+
+.certButton.primary {
+
+  background:
+    linear-gradient(
+      135deg,
+      #ff5a43,
+      #d82d1e
+    );
+
+  color: white;
+
+  border-color:
+    #ff5a43;
+
+  box-shadow:
+    0 0 18px
+    rgba(255,70,45,.18);
+
+}
+
+
+.certButton.primary:hover {
+
+  background:
+    linear-gradient(
+      135deg,
+      #ff795f,
+      #ed3928
+    );
+
+  color: white;
+
+  box-shadow:
+    0 0 25px
+    rgba(255,70,45,.35);
+
+}
+
+
+.verifyLink {
+
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color: #ff684e;
+
+  text-decoration: none;
+
+  font-size: 10px;
+
+  letter-spacing: 1px;
+
+  margin-top: 3px;
+
+  transition: .3s;
+
+}
+
+
+.verifyLink span {
+
+  transition: .3s;
+
+}
+
+
+.verifyLink:hover {
+
+  color: #ffb05f;
+
+}
+
+
+.verifyLink:hover span {
+
+  transform:
+    translateX(5px);
+
+}
+
+
+/* =========================
+   CARD FOOTER
+========================= */
+
+.cardFooter {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-top: 25px;
+
+  padding-top: 12px;
+
+  border-top:
+    1px solid
+    rgba(255,255,255,.05);
+
+  color: #46525f;
+
+  font-size: 8px;
+
+  letter-spacing: 2px;
+
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+
+  .certGrid {
+
+    grid-template-columns: 1fr;
+
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .certifications {
+
+    width: 92%;
+
+    padding:
+      40px 0 60px;
+
+  }
+
+
+  .certHeader {
+
+    margin-bottom: 35px;
+
+  }
+
+
+  .certHeader h1 {
+
+    font-size: 42px;
+
+  }
+
+
+  .certSubtitle {
+
+    font-size: 14px;
+
+  }
+
+
+  .vaultStatus {
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    text-align: center;
+
+  }
+
+
+  .certCard {
+
+    padding: 25px;
+
+  }
+
+
+  .certCard h2 {
+
+    font-size: 21px;
+
+  }
+
+
+  .certMeta {
+
+    grid-template-columns: 1fr;
+
+  }
+
+
+  .cardFooter {
+
+    font-size: 7px;
+
+  }
+
+}
+
+
+
+
+/* =========================
+   CERTIFICATION ENHANCEMENTS
+========================= */
+
+.certCard {
+  display: flex;
+  flex-direction: column;
+}
+
+.certCard h2 {
+  overflow-wrap: anywhere;
+}
+
+.certDescription {
+  flex-grow: 1;
+}
+
+.certPending {
+  margin-top: 23px;
+  padding: 11px 13px;
+  border: 1px dashed rgba(255, 104, 78, 0.25);
+  border-radius: 8px;
+  color: #ff9a75;
+  font-size: 9px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.certButton:focus-visible,
+.verifyLink:focus-visible {
+  outline: 2px solid #ff684e;
+  outline-offset: 4px;
+}
+
+@media (max-width: 700px) {
+  .certHeader h1 {
+    font-size: clamp(32px, 8vw, 42px);
+  }
+
+  .certCard {
+    min-height: auto;
+    padding: 23px 19px;
+  }
+
+  .certMeta {
+    grid-template-columns: 1fr;
+  }
+
+  .certActions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .certButton {
+    justify-content: center;
+  }
+
+  .cardFooter {
+    gap: 10px;
+    line-height: 1.5;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vaultDot,
+  .reactorRing,
+  .reactorCore,
+  .certCard:hover .scanLine {
+    animation: none !important;
+  }
+
+  .certCard,
+  .certButton,
+  .verifyLink {
+    transition: none !important;
+  }
+}
+
+
+/* EXPIRED CERTIFICATION STATUS */
+
+.verified.expiredStatus {
+  color: #ff987c;
+}
+
+.expiredCard {
+  border-color: rgba(255, 152, 124, 0.3);
+}
+
+.expiredCard .certCategory {
+  color: #ff987c;
+}
+
+.expiredCard .verified svg {
+  color: #ff987c;
+}
+
+/* Keep metadata labels and values separated */
+.certMeta div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.certMeta span {
+  display: block;
+}
+
+.certMeta strong {
+  overflow-wrap: anywhere;
+}

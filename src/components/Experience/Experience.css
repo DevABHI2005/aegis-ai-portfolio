@@ -1,0 +1,1087 @@
+.experienceContainer {
+
+  width: 90%;
+  max-width: 1400px;
+
+  min-height: 100vh;
+
+  margin: auto;
+
+  padding: 70px 0 90px;
+
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.experienceHeader {
+
+  text-align: center;
+
+  margin-bottom: 55px;
+
+}
+
+.experienceHeader p {
+
+  color: #63E6FF;
+
+  font-size: 11px;
+
+  letter-spacing: 5px;
+
+  margin-bottom: 14px;
+
+}
+
+.experienceHeader h1 {
+
+  margin: 0;
+
+  font-size: clamp(42px, 5vw, 60px);
+
+  letter-spacing: -2px;
+
+  color: white;
+
+}
+
+.experienceHeader h1 span {
+
+  color: #ff5037;
+
+  text-shadow:
+    0 0 25px rgba(255,80,55,.2);
+
+}
+
+.missionSubtitle {
+
+  margin-top: 12px;
+
+  color: #526a7a;
+
+  font-size: 9px;
+
+  letter-spacing: 3px;
+
+}
+
+
+/* =========================
+   MAIN INTERFACE
+========================= */
+
+.missionInterface {
+
+  display: grid;
+
+  grid-template-columns: 230px 1fr;
+
+  gap: 30px;
+
+  align-items: stretch;
+
+}
+
+
+/* =========================
+   LEFT RAIL
+========================= */
+
+.missionRail {
+
+  position: relative;
+
+  padding: 28px 22px;
+
+  border-radius: 20px;
+
+  background:
+
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.04),
+      rgba(255,255,255,.012)
+    );
+
+  border:
+    1px solid rgba(99,230,255,.1);
+
+  backdrop-filter: blur(18px);
+
+  overflow: hidden;
+
+}
+
+
+.missionRail::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  width: 2px;
+
+  height: 100%;
+
+  background:
+
+    linear-gradient(
+      to bottom,
+      #ff5037,
+      #63E6FF,
+      transparent
+    );
+
+  box-shadow:
+    0 0 15px rgba(99,230,255,.3);
+
+}
+
+
+/* =========================
+   STATUS
+========================= */
+
+.missionStatus {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+}
+
+.statusDot {
+
+  width: 8px;
+
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: #7CFFB2;
+
+  box-shadow:
+    0 0 8px #7CFFB2,
+    0 0 18px #7CFFB2;
+
+  animation: statusPulse 1.5s infinite;
+
+}
+
+@keyframes statusPulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: .35;
+  }
+
+}
+
+
+.missionStatus small {
+
+  display: block;
+
+  color: #526979;
+
+  font-size: 8px;
+
+  letter-spacing: 2px;
+
+}
+
+.missionStatus strong {
+
+  display: block;
+
+  margin-top: 4px;
+
+  color: #7CFFB2;
+
+  font-size: 10px;
+
+  letter-spacing: 1px;
+
+}
+
+
+/* =========================
+   NUMBER
+========================= */
+
+.missionNumber {
+
+  margin-top: 65px;
+
+  color: rgba(99,230,255,.1);
+
+  font-size: 86px;
+
+  font-weight: 800;
+
+  line-height: .9;
+
+  letter-spacing: -7px;
+
+}
+
+
+/* =========================
+   RAIL LINE
+========================= */
+
+.railLine {
+
+  height: 1px;
+
+  margin: 35px 0;
+
+  background:
+
+    linear-gradient(
+      90deg,
+      #63E6FF,
+      transparent
+    );
+
+  opacity: .3;
+
+}
+
+
+/* =========================
+   RAIL INFO
+========================= */
+
+.railInfo {
+
+  margin-bottom: 22px;
+
+}
+
+.railInfo span {
+
+  display: block;
+
+  color: #4c6575;
+
+  font-size: 8px;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 7px;
+
+}
+
+.railInfo strong {
+
+  display: block;
+
+  color: #cbd8e0;
+
+  font-size: 10px;
+
+  line-height: 1.5;
+
+}
+
+
+/* =========================
+   MAIN CARD
+========================= */
+
+.experienceCard {
+
+  position: relative;
+
+  padding: 40px;
+
+  background:
+
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.05),
+      rgba(255,255,255,.015)
+    );
+
+  border:
+    1px solid rgba(99,230,255,.13);
+
+  border-radius: 24px;
+
+  backdrop-filter: blur(20px);
+
+  box-shadow:
+
+    inset 0 1px rgba(255,255,255,.05),
+
+    0 25px 70px rgba(0,0,0,.25);
+
+  overflow: hidden;
+
+  transition: .4s;
+
+}
+
+.experienceCard:hover {
+
+  border-color:
+    rgba(99,230,255,.22);
+
+  box-shadow:
+
+    inset 0 1px rgba(255,255,255,.05),
+
+    0 30px 80px rgba(0,0,0,.3),
+
+    0 0 35px rgba(99,230,255,.05);
+
+}
+
+
+/* TOP RED LINE */
+
+.experienceCard::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  width: 35%;
+
+  height: 2px;
+
+  background:
+
+    linear-gradient(
+      90deg,
+      #ff5037,
+      transparent
+    );
+
+  box-shadow:
+    0 0 15px rgba(255,80,55,.5);
+
+}
+
+
+/* =========================
+   TOP
+========================= */
+
+.experienceTop {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-start;
+
+  gap: 20px;
+
+}
+
+.missionCode {
+
+  display: block;
+
+  color: #607989;
+
+  font-size: 8px;
+
+  letter-spacing: 3px;
+
+  margin-bottom: 12px;
+
+}
+
+.experienceTop h2 {
+
+  margin: 0 0 7px;
+
+  font-size: 34px;
+
+  line-height: 1.15;
+
+  color: white;
+
+}
+
+.experienceTop h3 {
+
+  margin: 0;
+
+  font-size: 16px;
+
+  font-weight: 500;
+
+  color: #ff5037;
+
+}
+
+
+/* =========================
+   STATUS
+========================= */
+
+.status {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 9px 14px;
+
+  border-radius: 30px;
+
+  border:
+    1px solid rgba(124,255,178,.18);
+
+  background:
+    rgba(124,255,178,.06);
+
+  color: #7CFFB2;
+
+  font-size: 8px;
+
+  font-weight: bold;
+
+  letter-spacing: 1.5px;
+
+  white-space: nowrap;
+
+}
+
+.status svg {
+
+  font-size: 12px;
+
+}
+
+
+/* =========================
+   DIVIDER
+========================= */
+
+.divider {
+
+  height: 1px;
+
+  margin: 30px 0;
+
+  background:
+
+    linear-gradient(
+      90deg,
+      rgba(99,230,255,.18),
+      rgba(255,255,255,.04),
+      transparent
+    );
+
+}
+
+
+/* =========================
+   TITLES
+========================= */
+
+.objective h4,
+.achievementSection h4,
+.techSection h4 {
+
+  margin: 0 0 18px;
+
+  color: #63E6FF;
+
+  font-size: 10px;
+
+  letter-spacing: 3px;
+
+}
+
+
+/* =========================
+   OBJECTIVE
+========================= */
+
+.objective p {
+
+  max-width: 900px;
+
+  margin: 0;
+
+  color: #91A4B2;
+
+  font-size: 15px;
+
+  line-height: 1.9;
+
+}
+
+
+/* =========================
+   ACHIEVEMENTS
+========================= */
+
+.achievementGrid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 10px;
+
+}
+
+
+.achievementItem {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  min-height: 48px;
+
+  padding: 10px 13px;
+
+  border-radius: 10px;
+
+  background:
+    rgba(255,255,255,.025);
+
+  border:
+    1px solid rgba(99,230,255,.07);
+
+  transition: .3s;
+
+}
+
+
+.achievementItem:hover {
+
+  transform:
+    translateX(5px);
+
+  background:
+    rgba(99,230,255,.05);
+
+  border-color:
+    rgba(99,230,255,.25);
+
+}
+
+
+.achievementNumber {
+
+  color: #ff5037;
+
+  font-size: 8px;
+
+  font-weight: bold;
+
+}
+
+
+.achievementItem svg {
+
+  color: #7CFFB2;
+
+  font-size: 12px;
+
+}
+
+
+.achievementItem > span:last-child {
+
+  color: #c2d0d9;
+
+  font-size: 11px;
+
+  line-height: 1.4;
+
+}
+
+
+/* =========================
+   TECH GRID
+========================= */
+
+.techGrid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(7, 1fr);
+
+  gap: 10px;
+
+}
+
+
+.techCard {
+
+  min-height: 85px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 9px;
+
+  border-radius: 12px;
+
+  background:
+    rgba(255,255,255,.025);
+
+  border:
+    1px solid rgba(99,230,255,.07);
+
+  transition: .35s;
+
+}
+
+
+.techIcon {
+
+  color: #63E6FF;
+
+  font-size: 23px;
+
+  transition: .35s;
+
+}
+
+
+.techCard p {
+
+  margin: 0;
+
+  color: #8299A8;
+
+  font-size: 9px;
+
+  letter-spacing: .5px;
+
+}
+
+
+.techCard:hover {
+
+  transform:
+    translateY(-6px);
+
+  border-color:
+    rgba(99,230,255,.35);
+
+  box-shadow:
+
+    0 10px 25px rgba(0,0,0,.2),
+
+    0 0 20px rgba(99,230,255,.08);
+
+}
+
+.techCard:hover .techIcon {
+
+  color: #ff5037;
+
+  filter:
+    drop-shadow(
+      0 0 8px rgba(255,80,55,.4)
+    );
+
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.experienceButtons {
+
+  display: flex;
+
+  justify-content: flex-start;
+
+  gap: 12px;
+
+  margin-top: 35px;
+
+  flex-wrap: wrap;
+
+}
+
+
+.experienceButtons a {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 13px 18px;
+
+  border-radius: 9px;
+
+  background:
+    rgba(255,255,255,.035);
+
+  border:
+    1px solid rgba(99,230,255,.12);
+
+  color: #dce7ed;
+
+  text-decoration: none;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 1px;
+
+  transition: .35s;
+
+}
+
+
+.experienceButtons a span {
+
+  color: #526979;
+
+  font-size: 15px;
+
+}
+
+
+.experienceButtons a:hover {
+
+  transform:
+    translateY(-4px);
+
+  color: #63E6FF;
+
+  border-color: #63E6FF;
+
+  box-shadow:
+    0 0 25px rgba(99,230,255,.1);
+
+}
+
+
+/* Certificate button */
+
+.experienceButtons a:last-child:hover {
+
+  color: #ff5037;
+
+  border-color: #ff5037;
+
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.missionFooter {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-top: 28px;
+
+  padding-top: 17px;
+
+  border-top:
+    1px solid rgba(255,255,255,.05);
+
+  color: #3f5665;
+
+  font-size: 7px;
+
+  letter-spacing: 1.5px;
+
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1100px) {
+
+  .missionInterface {
+
+    grid-template-columns:
+      180px 1fr;
+
+  }
+
+  .techGrid {
+
+    grid-template-columns:
+      repeat(4, 1fr);
+
+  }
+
+}
+
+
+@media(max-width:850px) {
+
+  .missionInterface {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .missionRail {
+
+    display: grid;
+
+    grid-template-columns:
+      auto 1fr auto;
+
+    align-items: center;
+
+    gap: 20px;
+
+  }
+
+  .missionNumber {
+
+    margin: 0;
+
+    font-size: 55px;
+
+  }
+
+  .railLine {
+
+    display: none;
+
+  }
+
+  .railInfo {
+
+    margin: 0;
+
+  }
+
+}
+
+
+@media(max-width:650px) {
+
+  .experienceContainer {
+
+    width: 92%;
+
+    padding: 60px 0;
+
+  }
+
+  .experienceCard {
+
+    padding: 25px;
+
+  }
+
+  .experienceTop {
+
+    flex-direction: column;
+
+  }
+
+  .experienceTop h2 {
+
+    font-size: 27px;
+
+  }
+
+  .achievementGrid {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .techGrid {
+
+    grid-template-columns:
+      repeat(2, 1fr);
+
+  }
+
+  .missionFooter {
+
+    flex-direction: column;
+
+  }
+
+}
+
+
+@media(max-width:430px) {
+
+  .missionRail {
+
+    grid-template-columns: 1fr 1fr;
+
+  }
+
+  .missionNumber {
+
+    display: none;
+
+  }
+
+}
+
+/* =========================
+   EXPERIENCE ENHANCEMENTS
+========================= */
+
+.experienceContainer {
+  position: relative;
+}
+
+.experienceHeader,
+.missionInterface {
+  position: relative;
+  z-index: 1;
+}
+
+.missionRail,
+.experienceCard {
+  transition:
+    border-color 0.35s ease,
+    box-shadow 0.35s ease,
+    transform 0.35s ease;
+}
+
+.missionRail:hover {
+  border-color: rgba(99, 230, 255, 0.24);
+}
+
+.achievementItem {
+  line-height: 1.5;
+}
+
+.techCard {
+  min-width: 0;
+  min-height: 95px;
+}
+
+.techCard p {
+  text-align: center;
+  line-height: 1.4;
+}
+
+.experienceButtons a:focus-visible {
+  outline: 2px solid #63e6ff;
+  outline-offset: 4px;
+}
+
+/* Tablet */
+@media (max-width: 1100px) {
+  .techGrid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
+/* Mobile */
+@media (max-width: 650px) {
+  .experienceContainer {
+    min-height: auto;
+  }
+
+  .missionRail {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 22px;
+  }
+
+  .missionStatus {
+    grid-column: 1 / -1;
+  }
+
+  .railInfo {
+    min-width: 0;
+  }
+
+  .railInfo strong {
+    overflow-wrap: anywhere;
+  }
+
+  .experienceCard {
+    padding: 22px 18px;
+  }
+
+  .experienceTop h2 {
+    font-size: 25px;
+  }
+
+  .achievementGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .techGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .experienceButtons {
+    flex-direction: column;
+  }
+
+  .experienceButtons a {
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .missionFooter {
+    line-height: 1.7;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .missionRail,
+  .experienceCard,
+  .achievementItem,
+  .techCard,
+  .experienceButtons a,
+  .statusDot {
+    animation: none !important;
+    transition: none !important;
+  }
+}

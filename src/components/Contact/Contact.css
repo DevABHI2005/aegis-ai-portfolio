@@ -1,0 +1,1216 @@
+.contactSection {
+
+  width: 90%;
+  max-width: 1400px;
+
+  margin: auto;
+
+  padding: 70px 0 110px;
+
+  position: relative;
+
+  box-sizing: border-box;
+
+}
+
+
+/* =========================
+   BACKGROUND
+========================= */
+
+.contactSection::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 700px;
+  height: 700px;
+
+  left: 50%;
+  top: 80px;
+
+  transform: translateX(-50%);
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255,65,40,.07),
+      rgba(255,100,40,.025) 35%,
+      transparent 70%
+    );
+
+  pointer-events: none;
+
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.contactHeader {
+
+  position: relative;
+
+  text-align: center;
+
+  margin-bottom: 28px;
+
+  z-index: 2;
+
+}
+
+
+.contactLabel {
+
+  color: #ff6249;
+
+  letter-spacing: 5px;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  margin-bottom: 15px;
+
+}
+
+
+.contactHeader h1 {
+
+  margin: 0;
+
+  color: white;
+
+  font-size: 58px;
+
+  font-weight: 800;
+
+  text-shadow:
+    0 0 30px
+    rgba(255,65,40,.12);
+
+}
+
+
+.contactSubtitle {
+
+  max-width: 650px;
+
+  margin: 18px auto 0;
+
+  color: #8c99a7;
+
+  line-height: 1.8;
+
+  font-size: 15px;
+
+}
+
+
+/* =========================
+   SYSTEM BAR
+========================= */
+
+.contactSystemBar {
+
+  max-width: 1000px;
+
+  margin: 0 auto 45px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  color: #5d6874;
+
+  font-size: 8px;
+
+  letter-spacing: 2px;
+
+}
+
+
+.systemIndicator {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  white-space: nowrap;
+
+}
+
+
+.systemIndicator svg:first-child {
+
+  font-size: 6px;
+
+  color: #7cffb2;
+
+  filter:
+    drop-shadow(
+      0 0 5px #7cffb2
+    );
+
+}
+
+
+.systemIndicator:last-child svg {
+
+  color: #ff6045;
+
+  font-size: 9px;
+
+}
+
+
+.systemLine {
+
+  flex: 1;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255,70,45,.25),
+      rgba(255,255,255,.04)
+    );
+
+}
+
+
+/* =========================
+   MAIN LAYOUT
+========================= */
+
+.contactContainer {
+
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 50px;
+
+  align-items: stretch;
+
+}
+
+
+/* =========================
+   LEFT PANEL
+========================= */
+
+.contactInfo {
+
+  position: relative;
+
+  padding: 40px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(25,28,33,.9),
+      rgba(7,9,13,.96)
+    );
+
+  border:
+    1px solid
+    rgba(255,70,45,.14);
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+}
+
+
+.contactInfo::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 250px;
+  height: 250px;
+
+  right: -100px;
+  top: -100px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255,70,45,.1),
+      transparent 70%
+    );
+
+}
+
+
+.contactInfo::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 2px;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent,
+      #ff543d,
+      transparent
+    );
+
+  opacity: .7;
+
+}
+
+
+/* =========================
+   TERMINAL HEADER
+========================= */
+
+.terminalHeader {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 30px;
+
+}
+
+
+.terminalHeader > span {
+
+  color: #56616d;
+
+  font-size: 8px;
+
+  letter-spacing: 3px;
+
+}
+
+
+.onlineStatus {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 7px 12px;
+
+  border-radius: 20px;
+
+  background:
+    rgba(124,255,178,.06);
+
+  border:
+    1px solid
+    rgba(124,255,178,.14);
+
+  color: #7cffb2;
+
+  font-size: 8px;
+
+  letter-spacing: 1px;
+
+}
+
+
+.onlineStatus svg {
+
+  font-size: 5px;
+
+  filter:
+    drop-shadow(
+      0 0 5px #7cffb2
+    );
+
+}
+
+
+/* =========================
+   MAIN TEXT
+========================= */
+
+.contactInfo h2 {
+
+  position: relative;
+
+  margin: 0 0 22px;
+
+  max-width: 500px;
+
+  color: white;
+
+  font-size: 45px;
+
+  line-height: 1.1;
+
+}
+
+
+.contactInfo h2 span {
+
+  color: #ff6045;
+
+  text-shadow:
+    0 0 20px
+    rgba(255,70,45,.2);
+
+}
+
+
+.contactInfo > p {
+
+  max-width: 520px;
+
+  color: #8f9ba8;
+
+  font-size: 15px;
+
+  line-height: 1.9;
+
+}
+
+
+/* =========================
+   ARC REACTOR
+========================= */
+
+.reactorContainer {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 25px;
+
+  margin-top: 35px;
+
+}
+
+
+.reactorOuter {
+
+  position: relative;
+
+  width: 105px;
+  height: 105px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+}
+
+
+.reactorRing {
+
+  position: absolute;
+
+  border-radius: 50%;
+
+}
+
+
+.ringOne {
+
+  width: 100px;
+  height: 100px;
+
+  border:
+    1px solid
+    rgba(255,80,55,.35);
+
+  border-top-color:
+    #ff543d;
+
+  animation:
+    reactorSpin 7s linear infinite;
+
+}
+
+
+.ringTwo {
+
+  width: 78px;
+  height: 78px;
+
+  border:
+    1px dashed
+    rgba(255,160,80,.5);
+
+  animation:
+    reactorSpinReverse 5s linear infinite;
+
+}
+
+
+.reactorCore {
+
+  width: 48px;
+  height: 48px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      white 0%,
+      #fff0bf 12%,
+      #ff9d62 28%,
+      #ff543d 48%,
+      #9d1c13 68%,
+      transparent 72%
+    );
+
+  box-shadow:
+    0 0 15px #ff6045,
+    0 0 35px
+      rgba(255,65,40,.5),
+    0 0 60px
+      rgba(255,65,40,.2);
+
+  animation:
+    reactorPulse 2s ease-in-out infinite;
+
+}
+
+
+.reactorBolt {
+
+  position: absolute;
+
+  color: white;
+
+  font-size: 13px;
+
+  z-index: 3;
+
+}
+
+
+.reactorText {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+
+}
+
+
+.reactorText span {
+
+  color: #596571;
+
+  font-size: 8px;
+
+  letter-spacing: 3px;
+
+}
+
+
+.reactorText strong {
+
+  color: #ff684f;
+
+  font-size: 12px;
+
+  letter-spacing: 2px;
+
+}
+
+
+@keyframes reactorSpin {
+
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+
+@keyframes reactorSpinReverse {
+
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0);
+  }
+
+}
+
+
+@keyframes reactorPulse {
+
+  0%,
+  100% {
+    transform: scale(.92);
+  }
+
+  50% {
+    transform: scale(1.08);
+  }
+
+}
+
+
+/* =========================
+   LOCATION
+========================= */
+
+.location {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin-top: 35px;
+
+  padding-top: 25px;
+
+  border-top:
+    1px solid
+    rgba(255,255,255,.05);
+
+}
+
+
+.location > svg {
+
+  color: #ff6045;
+
+  font-size: 20px;
+
+}
+
+
+.location span {
+
+  display: block;
+
+  color: #56616d;
+
+  font-size: 8px;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 5px;
+
+}
+
+
+.location strong {
+
+  color: #dce3e9;
+
+  font-size: 13px;
+
+}
+
+
+/* =========================
+   RIGHT PANEL
+========================= */
+
+.contactActions {
+
+  position: relative;
+
+  padding: 40px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(20,23,28,.82),
+      rgba(6,8,12,.94)
+    );
+
+  border:
+    1px solid
+    rgba(255,70,45,.14);
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+}
+
+
+.contactActions::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #ff543d,
+      transparent
+    );
+
+}
+
+
+/* =========================
+   TERMINAL LABEL
+========================= */
+
+.terminalLabel {
+
+  margin-bottom: 20px;
+
+  color: #56616d;
+
+  font-size: 8px;
+
+  letter-spacing: 3px;
+
+}
+
+
+/* =========================
+   CONTACT CARDS
+========================= */
+
+.contactCard {
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  padding: 18px;
+
+  margin-bottom: 12px;
+
+  text-decoration: none;
+
+  color: white;
+
+  background:
+    rgba(255,255,255,.025);
+
+  border:
+    1px solid
+    rgba(255,70,45,.09);
+
+  border-radius: 12px;
+
+  transition: .35s;
+
+  overflow: hidden;
+
+}
+
+
+.contactCard::before {
+
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 2px;
+  height: 100%;
+
+  background:
+    #ff543d;
+
+  transform:
+    scaleY(0);
+
+  transition: .35s;
+
+}
+
+
+.contactCard:hover {
+
+  transform:
+    translateX(7px);
+
+  border-color:
+    rgba(255,80,55,.4);
+
+  background:
+    rgba(255,60,40,.045);
+
+  box-shadow:
+    0 10px 30px
+    rgba(0,0,0,.2),
+    0 0 20px
+    rgba(255,60,40,.05);
+
+}
+
+
+.contactCard:hover::before {
+
+  transform: scaleY(1);
+
+}
+
+
+/* =========================
+   ICON
+========================= */
+
+.contactIcon {
+
+  width: 46px;
+  height: 46px;
+
+  min-width: 46px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 11px;
+
+  background:
+    rgba(255,60,40,.06);
+
+  border:
+    1px solid
+    rgba(255,70,45,.14);
+
+  color: #ff654d;
+
+  font-size: 18px;
+
+  transition: .35s;
+
+}
+
+
+.contactCard:hover .contactIcon {
+
+  color: #ffad6c;
+
+  border-color:
+    rgba(255,100,60,.4);
+
+  box-shadow:
+    0 0 18px
+    rgba(255,60,40,.12);
+
+}
+
+
+.contactCard div:nth-child(2) {
+
+  flex: 1;
+
+}
+
+
+.contactCard span {
+
+  display: block;
+
+  color: #56616d;
+
+  font-size: 7px;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 5px;
+
+}
+
+
+.contactCard strong {
+
+  color: #dce3e9;
+
+  font-size: 13px;
+
+}
+
+
+.arrow {
+
+  color: #4d5863;
+
+  transition: .3s;
+
+}
+
+
+.contactCard:hover .arrow {
+
+  color: #ff6045;
+
+  transform:
+    translateX(5px);
+
+}
+
+
+/* =========================
+   TERMINAL FOOTER
+========================= */
+
+.terminalFooter {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin-top: 25px;
+
+  color: #4e5964;
+
+  font-size: 7px;
+
+  letter-spacing: 1.5px;
+
+}
+
+
+.terminalFooter svg {
+
+  color: #7cffb2;
+
+  font-size: 5px;
+
+  filter:
+    drop-shadow(
+      0 0 5px #7cffb2
+    );
+
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:950px) {
+
+  .contactContainer {
+
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+
+  }
+
+}
+
+
+@media(max-width:650px) {
+
+  .contactSection {
+
+    width: 92%;
+
+    padding: 45px 0 70px;
+
+  }
+
+
+  .contactHeader h1 {
+
+    font-size: 42px;
+
+  }
+
+
+  .contactSubtitle {
+
+    font-size: 14px;
+
+  }
+
+
+  .contactSystemBar {
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+  }
+
+
+  .systemLine {
+
+    display: none;
+
+  }
+
+
+  .contactInfo,
+  .contactActions {
+
+    padding: 27px 22px;
+
+  }
+
+
+  .contactInfo h2 {
+
+    font-size: 34px;
+
+  }
+
+
+  .terminalHeader {
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+    flex-direction: column;
+
+  }
+
+
+  .reactorContainer {
+
+    margin-top: 30px;
+
+  }
+
+
+  .reactorOuter {
+
+    width: 85px;
+    height: 85px;
+
+  }
+
+
+  .ringOne {
+
+    width: 82px;
+    height: 82px;
+
+  }
+
+
+  .ringTwo {
+
+    width: 65px;
+    height: 65px;
+
+  }
+
+
+  .reactorCore {
+
+    width: 40px;
+    height: 40px;
+
+  }
+
+}
+
+
+/* =========================
+   CONTACT FORM
+========================= */
+
+.contactForm {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 30px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-bottom: 17px;
+}
+
+.formGroup label {
+  color: #71808e;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.formGroup input,
+.formGroup textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px 15px;
+  color: #e5edf4;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 70, 45, 0.14);
+  border-radius: 9px;
+  outline: none;
+  font: inherit;
+  font-size: 13px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.formGroup textarea {
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.7;
+}
+
+.formGroup input::placeholder,
+.formGroup textarea::placeholder {
+  color: #56616d;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  border-color: #ff6045;
+  box-shadow: 0 0 15px rgba(255, 70, 45, 0.1);
+}
+
+.sendMessageButton {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 15px;
+  margin-top: 8px;
+  border: 1px solid #ff6045;
+  border-radius: 9px;
+  background: linear-gradient(135deg, #ff6045, #d82d1e);
+  color: white;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sendMessageButton:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 80, 55, 0.2);
+}
+
+.sendMessageButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.sendMessageButton:focus-visible,
+.copyEmailButton:focus-visible {
+  outline: 2px solid #63e6ff;
+  outline-offset: 4px;
+}
+
+.formStatus {
+  margin-top: 15px;
+  color: #7cffb2;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.alternativeChannels {
+  padding-top: 25px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.copyEmailButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 22px;
+  padding: 10px 13px;
+  color: #8fa3b2;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(99, 230, 255, 0.15);
+  border-radius: 8px;
+  font-size: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.copyEmailButton:hover {
+  color: #63e6ff;
+  border-color: #63e6ff;
+}
+
+/* FORM MOBILE */
+
+@media (max-width: 650px) {
+  .formGroup input,
+  .formGroup textarea {
+    font-size: 16px;
+  }
+
+  .sendMessageButton {
+    padding: 14px;
+  }
+
+  .contactCard {
+    gap: 12px;
+    padding: 14px;
+  }
+
+  .contactCard strong {
+    font-size: 12px;
+    overflow-wrap: anywhere;
+  }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+  .sendMessageButton,
+  .formGroup input,
+  .formGroup textarea,
+  .copyEmailButton {
+    transition: none;
+  }
+}
