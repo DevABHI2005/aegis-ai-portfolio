@@ -152,18 +152,20 @@ function App() {
               minHeight={500}
             />
 
-            <LazySection
-              id="experience"
-              label="Professional experience"
-              Component={Experience}
-              minHeight={550}
-            />
+            
 
             <LazySection
               id="education"
               label="Education"
               Component={Timeline}
               minHeight={500}
+            />
+
+            <LazySection
+              id="experience"
+              label="Professional experience"
+              Component={Experience}
+              minHeight={550}
             />
 
             <LazySection

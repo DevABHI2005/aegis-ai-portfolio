@@ -1,11 +1,12 @@
+
 import "./Navbar.css";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const navItems = [
   { id: "home", label: "HOME", code: "01" },
   { id: "about", label: "ABOUT", code: "02" },
-  { id: "experience", label: "EXPERIENCE", code: "03" },
-  { id: "education", label: "EDUCATION", code: "04" },
+  { id: "education", label: "EDUCATION", code: "03" },
+  { id: "experience", label: "EXPERIENCE", code: "04" },
   { id: "skills", label: "SKILLS", code: "05" },
   { id: "projects", label: "PROJECTS", code: "06" },
   { id: "certifications", label: "CERTIFICATIONS", code: "07" },
@@ -17,14 +18,18 @@ export default function Navbar() {
   const [showNavbar, setShowNavbar] = useState(true);
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const navigatingRef = useRef(false);
+  const navigationTimeoutRef = useRef(null);
+
   useEffect(() => {
     let previousScroll = window.scrollY;
     let ticking = false;
 
     const updateNavigation = () => {
       const current = window.scrollY;
+      const navbar = document.querySelector(".navbar");
 
-      if (menuOpen || current < 100) {
+      if (navigatingRef.current || menuOpen || current < 100) {
         setShowNavbar(true);
       } else if (current > previousScroll + 3) {
         setShowNavbar(false);
@@ -34,18 +39,19 @@ export default function Navbar() {
 
       previousScroll = current;
 
-      const offset = 130;
+      const navbarOffset = navbar
+        ? navbar.getBoundingClientRect().height + 35
+        : 110;
+
       let currentSection = "home";
 
       navItems.forEach((item) => {
         const section = document.getElementById(item.id);
-
         if (!section) return;
 
-        const top = section.offsetTop;
-        const bottom = top + section.offsetHeight;
+        const rect = section.getBoundingClientRect();
 
-        if (current + offset >= top && current + offset < bottom) {
+        if (rect.top <= navbarOffset && rect.bottom > navbarOffset) {
           currentSection = item.id;
         }
       });
@@ -60,7 +66,9 @@ export default function Navbar() {
         ticking = true;
       }
 
-      if (menuOpen) setMenuOpen(false);
+      if (menuOpen) {
+        setMenuOpen(false);
+      }
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -71,32 +79,57 @@ export default function Navbar() {
     };
   }, [menuOpen]);
 
+  useEffect(() => {
+    return () => {
+      if (navigationTimeoutRef.current) {
+        clearTimeout(navigationTimeoutRef.current);
+      }
+    };
+  }, []);
+
   const scrollToSection = (id) => {
-  const section = document.getElementById(id);
+    const section = document.getElementById(id);
 
-  if (!section) return;
+    if (!section) return;
 
-  const navbarOffset = window.innerWidth <= 800 ? 85 : 110;
+    navigatingRef.current = true;
+    setShowNavbar(true);
+    setActive(id);
+    setMenuOpen(false);
 
-  if (window.__aegisLenis) {
-    window.__aegisLenis.scrollTo(section, {
-      offset: -navbarOffset,
-      duration: 1.2
-    });
-  } else {
-    const sectionTop =
-      section.getBoundingClientRect().top + window.scrollY;
+    if (navigationTimeoutRef.current) {
+      clearTimeout(navigationTimeoutRef.current);
+    }
 
-    window.scrollTo({
-      top: Math.max(0, sectionTop - navbarOffset),
-      behavior: "smooth"
-    });
-  }
+    const navbar = document.querySelector(".navbar");
 
-  setActive(id);
-  setShowNavbar(true);
-  setMenuOpen(false);
-};
+    const navbarOffset = navbar
+      ? navbar.getBoundingClientRect().height +
+        (window.innerWidth <= 600 ? 25 : 35)
+      : 110;
+
+    const targetPosition = Math.max(
+      0,
+      section.getBoundingClientRect().top +
+        window.scrollY -
+        navbarOffset
+    );
+
+    if (window.__aegisLenis) {
+      window.__aegisLenis.scrollTo(targetPosition, {
+        duration: 1.2
+      });
+    } else {
+      window.scrollTo({
+        top: targetPosition,
+        behavior: "smooth"
+      });
+    }
+
+    navigationTimeoutRef.current = setTimeout(() => {
+      navigatingRef.current = false;
+    }, 1600);
+  };
 
   const renderNavItems = () =>
     navItems.map((item) => (
@@ -158,7 +191,9 @@ export default function Navbar() {
       <button
         type="button"
         className={`mobileMenuButton ${menuOpen ? "open" : ""}`}
-        aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+        aria-label={
+          menuOpen ? "Close navigation menu" : "Open navigation menu"
+        }
         aria-expanded={menuOpen}
         aria-controls="mobile-navigation"
         onClick={() => {
